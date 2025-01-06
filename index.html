@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+
+    <!-- Replace with your own title and description. -->
+    <title>Emotion Voice API</title>
+    <meta name="robots" content="index,follow" />
+    <meta name="description"
+        content="Our API enables developers to build real-time, multimodal AI experiences that feel natural and responsive." />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Emotion Voice API" />
+    <meta property="og:description"
+        content="Our API enables developers to build real-time, multimodal AI experiences that feel natural and responsive." />
+    <meta property="og:url" content="https://docs.aishengyun.cn" />
+    <meta property="og:site_name" content="aishengyun.cn" />
+
+    <!-- Default Theme (see https://docsify.js.org/#/themes) -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/buble.css" title="buble" />
+    <!--link rel="stylesheet" href="//cdn.jsdelivr.net/npm/element-plus/dist/index.css" /-->
+    <style>
+
+        .markdown-section p.tip {
+            border-bottom-right-radius: 2px;
+            border-left: 4px solid #0072dd;
+            border-top-right-radius: 2px;
+            margin: 2em 0;
+            padding: 12px 24px 12px 30px;
+            position: relative;
+        }
+
+        .markdown-section p.tip:before {
+            background-color: #0072dd;
+            border-radius: 100%;
+            color: #fff;
+            content: "!";
+            font-family: Dosis, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            left: -12px;
+            line-height: 20px;
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            top: 14px;
+        }
+
+        .markdown-section .alert
+        {
+            font-size:.875rem;
+            line-height: 1.7142857; 
+            border-radius: .5rem; 
+            margin: 1rem 0; 
+            padding: 1rem;
+        }
+        .markdown-section .alert-success{
+            border: 1px solid #99e75d;
+            background-color: #f6ffed;
+            color: #99e75d;
+        }
+        .markdown-section .alert-info {
+            border: 1px solid #0072dd; 
+            background-color: #f4fafe; 
+            color: #0072dd;
+        }
+        .markdown-section .alert-warning{
+            border: 1px solid #ad6200; 
+            background-color: #fdfbe9; 
+            color: #ad6200;
+        }
+        .markdown-section  .alert-error{
+            border: 1px solid #f97569; 
+            background-color: #fff2f0; 
+            color: #f97569;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">Loading ...</div>
+
+    <script>
+        // Docsify Configuration (see https://docsify.js.org/#/configuration)
+        window.$docsify = {
+            name: 'Emotion TTS API',
+            // Sidebar Configuration
+            auto2top: true,
+            loadSidebar: true,
+            maxLevel: 0,
+            // Set subMaxLevel to 0 to remove automatic display of page table of contents (TOC) in Sidebar
+            subMaxLevel: 3,
+            // Search Plugin Configuration
+            executeScript: true,
+            loadSidebar: true,
+            loadNavbar: true,
+            mergeNavbar: true,
+            // ga: 'UA-106147152-1',
+            search: {
+                placeholder: 'Type to search',
+                noData: 'No matches found.',
+                // Headline depth, 1 - 6
+                depth: 2,
+            },
+            nameLink: {
+                '/zh-cn/': '#/zh-cn/',
+                '/': '#/',
+              },
+            search: {
+                noData: {
+                '/zh-cn/': '没有结果!',
+                '/': 'No results!',
+                },
+                paths: 'auto',
+                placeholder: {
+                '/zh-cn/': '搜索',
+                '/': 'Search',
+                },
+                pathNamespaces: ['/zh-cn'],
+            },
+
+        };
+    </script>
+
+    <!-- Required -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+    <!-- Recommended -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/element-plus"></script-->
+</body>
+
+</html>
