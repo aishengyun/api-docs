@@ -33,8 +33,7 @@ This method is suitable for scenarios where speech content needs to be generated
 ### **Features**
 
 - Supports various audio output formats, including **WAV** and **MP3**.  
-- Ideal for batch speech generation.  
-- Facilitates easy storage and management of audio files.  
+- Ideal for batch speech generation.   
 
 **Note**: PCM format output is not recommended for direct use due to the lack of audio format definition, which may cause playback issues on local devices.
 
