@@ -48,7 +48,7 @@
 ### 命令行
 
 ```bash
-curl --location 'https://speech.act-gpt.com/v1/audio/embedding' \
+curl --location 'https://api.aishengyu.cn/v1/audio/embedding' \
 --header 'Authorization: Bearer <your_api_key>' \
 --form 'file=@"<your_audio_file>"'
 ```
@@ -60,7 +60,7 @@ import httpx
 from pathlib import Path
 
 file = "<your_audio_file>"
-embedding_url = "https://speech.act-gpt.com/v1/audio/embedding"
+embedding_url = "https://api.aishengyu.cn/v1/audio/embedding"
 headers = {
   "Authorization": "Bearer <your_api_key>"
 }

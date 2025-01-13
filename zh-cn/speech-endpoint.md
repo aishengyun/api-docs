@@ -59,7 +59,7 @@
 #### 命令行
 
 ```bash
-curl --location 'https://speech.act-gpt.com/v1/audio/speech' \
+curl --location 'https://api.aishengyu.cn/v1/audio/speech' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <your_api_key>' \
 --data '{

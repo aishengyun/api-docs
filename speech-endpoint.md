@@ -79,7 +79,7 @@ This guide details how to use the HTTP TTS API, supporting both standard audio f
 #### Command Line
 
 ```bash
-curl --location 'https://speech.act-gpt.com/v1/audio/speech' \
+curl --location 'https://api.aishengyu.com/v1/audio/speech' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <your_api_key>' \
 --data '{
