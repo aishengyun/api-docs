@@ -9,7 +9,7 @@ Emotion-TTS 在语音合成质量方面处于行业领先地位。即便在不�
 以下是部分系统语音，完整语音请查看[系统语音列表](/zh-cn/voices)
 
 
-| <audio controls src="https://cdn.online-gpt.net/files/natural.wav">Your browser does not support the audio element. </audio>  | <audio controls src="https://cdn.online-gpt.net/files/allen.wav">Your browser does not support the audio element. </audio> |
+| <audio controls src="https://cdn.aishengyun.cn/speakers/zh_female_tianmei.wav">Your browser does not support the audio element. </audio>  | <audio controls src="https://cdn.aishengyun.cn/speakers/zh_female_xiaotong.wav">Your browser does not support the audio element. </audio> |
 | :------------ |:---------------:|
 
 
@@ -33,17 +33,17 @@ Emotion-TTS 广泛应用于以下场景:
 - 强大的理解能力: 基于大模型的语音合成技术,能准确理解复杂文本。例如输入: `2025/01/01 上午有 1/3 的概率下暴雨，所以单位有 578 人选择 10:30am 出门上班`, 模型可完美还原这段包含数字、时间、概率的复杂表述。
 
 <p class="my-2">
-<audio controls src="https://cdn.online-gpt.net/files/normal_understanding.wav">
+<audio controls src="https://cdn.aishengyun.cn/assets/tts/normal_understanding.wav">
   Your browser does not support the audio element.
 </audio>
 </p>
 
 ## 快速开始
 
-我们提供完整的示例代码帮助您快速接入服务。请下载 [示例代码包](https://cdn.online-gpt.net/files/examples.zip) 开始体验。
+我们提供完整的示例代码帮助您快速接入服务。请下载 [示例代码包](https://cdn.aishengyun.cn/assets/tts/examples.zip) 开始体验。
 
 ## 技术支持
 
 扫描下方二维码加入我们的技术支持群，获取即时帮助：
 
-![技术支持群二维码](https://cdn.online-gpt.net/images/qrcode_ma.png ':size=280')
+![技术支持群二维码](https://cdn.aishengyun.cn/assets/qr/qrcode_ma.png ':size=280')

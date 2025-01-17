@@ -5,16 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-    <title>Emotion TTS API</title>
+
+    <title>爱声云 Emotion TTS API</title>
     <meta name="robots" content="index,follow" />
-    <meta name="keywords" content="TTS,API,Responsive,Real-time,Multimodal AI,Voice Chat" />
-    <meta name="description" content="Emotion TTS API by Aishengyun helps developers create natural, responsive, real-time multimodal AI experiences. It enables developers to quickly implement real-time voice chat on hardware." />
+    <meta name="keywords" content="爱声云,TTS,API,响应式,实时,多模态AI,语音聊天" />
+    <meta name="description" content="爱声云 Emotion TTS API 帮助开发者能够构建自然、响应式的实时多模态AI体验。帮助开发者快速实现硬件上的实时语音聊天。" />
     <meta name="theme-color" content="#ffffff" />
     <meta property="og:title" content="Emotion Voice API" />
-    <meta property="og:description" content="Emotion TTS API by Aishengyun helps developers create natural, responsive, real-time multimodal AI experiences. It enables developers to quickly implement real-time voice chat on hardware." />    <meta property="og:url" content="https://docs.aishengyun.cn" />
-        <meta property="og:site_name" content="aishengyun.com" />
+    <meta property="og:description" content="爱声云 Emotion TTS API 帮助开发者能够构建自然、响应式的实时多模态AI体验。帮助开发者快速实现硬件上的实时语音聊天。" />
+    <meta property="og:url" content="https://docs.aishengyun.cn" />
+    <meta property="og:site_name" content="爱声云" />
     <meta property="og:locale" content="zh_CN"/>
     <meta property="og:image" content="https://cdn.aishengyun.cn/assets/logo.png">
+
     <!-- Default Theme (see https://docsify.js.org/#/themes) -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/buble.css" title="buble" />
     <!--link rel="stylesheet" href="//cdn.jsdelivr.net/npm/element-plus/dist/index.css" /-->
@@ -103,20 +106,32 @@
                 depth: 2,
             },
             nameLink: {
+                '/zh-cn/': '#/zh-cn/',
                 '/': '#/',
               },
             search: {
                 noData: {
-                '/zh-cn/': '找不到结果！',
-                '/': 'No results!',
+                '/': '找不到结果！',
                 },
                 paths: 'auto',
                 placeholder: {
-                '/zh-cn/': '搜索',
-                '/': 'Search',
+                '/': '搜索',
                 },
-                pathNamespaces: ['/zh-cn'],
             },
+            plugins: [
+                function (hook, vm) {
+                    var year = new Date().getFullYear();
+                    hook.beforeEach(function (html) {       
+                    return (
+                        html +
+                        "\n\n----\n\n" +
+                        "©  2024 - " +
+                        year +
+                        " 爱声云 " +
+                        "<a target='_blank' href='https://beian.miit.gov.cn/'>京 ICP 备 19058380 号 -5</a>"
+                    )});
+                }
+            ]
         };
     </script>
 
