@@ -75,7 +75,11 @@ curl --location 'https://api.aishengyu.cn/v1/audio/speech' \
   },
   "language": "zh",
   "transcript": "哎呀，你来找我啦！今天过得怎么样呀？我今天看到院子里的花开了呢，可漂亮啦！你想不想和我一起去看看呀？"
-}' --output output.wav
+}' \
+--output output.wav \
+--fail-with-body \
+--silent \
+|| (jq . output.wav  && rm output.wav )
 ```
 
 #### Python 代码

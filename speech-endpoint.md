@@ -95,7 +95,11 @@ curl --location 'https://api.aishengyu.com/v1/audio/speech' \
   },
   "language": "zh",
   "transcript": "I understand your concern, and I’ll do my best to help resolve this issue for you.”"
-}' --output output.wav
+}' \
+--output output.wav \
+--fail-with-body \
+--silent \
+|| (jq . output.wav  && rm output.wav )
 ```
 
 #### Python Example
