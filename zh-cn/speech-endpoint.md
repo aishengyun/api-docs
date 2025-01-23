@@ -29,7 +29,7 @@
 | 参数名 | 类型 | 是否必需 | 说明 |
 |--------|------|----------|------|
 | mode | string | 是 | 声音模式：`id` 或 `embedding` |
-| id | string | 条件必需 | 当 mode 为 `id` 时必填，指定[预设声音](/zh-cn/voices) |
+| id | string | 条件必需 | 当 mode 为 `id` 时必填，指定[预设声音](/voices) |
 | embedding | float[] | 条件必需 | 当 mode 为 `embedding` 时必填，192维声音特征向量 |
 
 #### output_format 对象

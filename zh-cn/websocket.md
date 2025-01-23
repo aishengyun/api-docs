@@ -28,7 +28,7 @@
 
 2. 模型下发的响应包含你传入的 `context_id` ，以便你可以匹配请求和响应。
 
-请阅读有关[使用上下文的指南](/zh-cn/contexts)以便了解更多信息。
+请阅读有关[使用上下文的指南](/contexts)以便了解更多信息。
 
 ## 使用和性能指导
 
@@ -46,7 +46,7 @@
 
 `GET` wss://api.aishengyun.cn/v1/audio/speech
 
-连接身份验证，请参考[使用 API 密钥进行身份验证](/zh-cn/api-overview?id=使用-api-密钥进行身份验证)
+连接身份验证，请参考[使用 API 密钥进行身份验证](/api-overview?id=使用-api-密钥进行身份验证)
 
 
 ## 发送数据
@@ -65,7 +65,7 @@
 | 参数名 | 类型 | 是否必需 | 说明 |
 |--------|------|----------|------|
 | mode | string | 是 | 声音模式：`id` 或 `embedding` |
-| id | string | 条件必需 | 当 mode 为 `id` 时必填，指定[预设声音](/zh-cn/voices) |
+| id | string | 条件必需 | 当 mode 为 `id` 时必填，指定[预设声音](/voices) |
 | embedding | float[] | 条件必需 | 当 mode 为 `embedding` 时必填，192维声音特征向量 |
 
 #### output_format 对象
