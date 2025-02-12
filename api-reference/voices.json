@@ -1,0 +1,646 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+    "title": "Aishenyun API",
+    "description": "API for aishengyun",
+    "version": "1.0.0"
+    },
+    "paths": {
+    "/": {
+    "get": {
+    "tags": [
+    "index"
+    ],
+    "summary": "Index",
+    "operationId": "index__get",
+    "responses": {
+    "200": {
+    "description": "Successful Response",
+    "content": {
+    "application/json": {
+    "schema": { }
+    }
+    }
+    }
+    }
+    }
+    },
+    "/v1/audio/voices": {
+    "get": {
+    "tags": [
+    "voices"
+    ],
+    "summary": "Get Voices",
+    "operationId": "get_voices_v1_audio_voices_get",
+    "responses": {
+    "200": {
+    "description": "Successful Response",
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/VoiceListResponse"
+    }
+    }
+    }
+    }
+    },
+    "security": [
+    {
+    "BearerAuth": [ ]
+    }
+    ]
+    },
+    "post": {
+    "tags": [
+    "voices"
+    ],
+    "summary": "Create Voices",
+    "operationId": "create_voices_v1_audio_voices_post",
+    "requestBody": {
+    "content": {
+    "multipart/form-data": {
+    "schema": {
+    "$ref": "#/components/schemas/Body_create_voices_v1_audio_voices_post"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "Successful Response",
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/VoiceResponse"
+    }
+    }
+    }
+    },
+    "422": {
+    "description": "Validation Error",
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/HTTPValidationError"
+    }
+    }
+    }
+    }
+    },
+    "security": [
+    {
+    "BearerAuth": [ ]
+    }
+    ]
+    },
+    "delete": {
+    "tags": [
+    "voices"
+    ],
+    "summary": "Delete Voice",
+    "operationId": "delete_voice_v1_audio_voices_delete",
+    "responses": {
+    "200": {
+    "description": "Successful Response",
+    "content": {
+    "application/json": {
+    "schema": { }
+    }
+    }
+    }
+    },
+    "security": [
+    {
+    "BearerAuth": [ ]
+    }
+    ]
+    }
+    },
+    "/v1/audio/voices/{id}": {
+    "get": {
+    "tags": [
+    "voices"
+    ],
+    "summary": "Get Voice",
+    "operationId": "get_voice_v1_audio_voices__id__get",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string",
+    "title": "Id"
+    }
+    }
+    ],
+    "responses": {
+    "200": {
+    "description": "Successful Response",
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/VoiceResponse"
+    }
+    }
+    }
+    },
+    "422": {
+    "description": "Validation Error",
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/HTTPValidationError"
+    }
+    }
+    }
+    }
+    },
+    "security": [
+    {
+    "BearerAuth": [ ]
+    }
+    ]
+    },
+    "patch": {
+    "tags": [
+    "voices"
+    ],
+    "summary": "Patch Voice",
+    "operationId": "patch_voice_v1_audio_voices__id__patch",
+    "parameters": [
+    {
+    "name": "id",
+    "in": "path",
+    "required": true,
+    "schema": {
+    "type": "string",
+    "title": "Id"
+    }
+    }
+    ],
+    "requestBody": {
+    "required": true,
+    "content": {
+    "multipart/form-data": {
+    "schema": {
+    "$ref": "#/components/schemas/Body_patch_voice_v1_audio_voices__id__patch"
+    }
+    }
+    }
+    },
+    "responses": {
+    "200": {
+    "description": "Successful Response",
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/VoiceResponse"
+    }
+    }
+    }
+    },
+    "422": {
+    "description": "Validation Error",
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/HTTPValidationError"
+    }
+    }
+    }
+    }
+    },
+    "security": [
+    {
+    "BearerAuth": [ ]
+    }
+    ]
+    }
+    },
+    "/v1/audio/speech": {
+    "post": {
+    "tags": [
+    "speech"
+    ],
+    "summary": "Post Speech",
+    "operationId": "post_speech_v1_audio_speech_post",
+    "requestBody": {
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/Speech_Model"
+    }
+    }
+    },
+    "required": true
+    },
+    "responses": {
+    "200": {
+    "description": "Successful Response",
+    "content": {
+    "application/json": {
+    "schema": { }
+    }
+    }
+    },
+    "422": {
+    "description": "Validation Error",
+    "content": {
+    "application/json": {
+    "schema": {
+    "$ref": "#/components/schemas/HTTPValidationError"
+    }
+    }
+    }
+    }
+    },
+    "security": [
+    {
+    "BearerAuth": [ ]
+    }
+    ]
+    }
+    },
+    "/v1/test/user": {
+    "get": {
+    "tags": [
+    "test"
+    ],
+    "summary": "Get Info",
+    "operationId": "get_info_v1_test_user_get",
+    "responses": {
+    "200": {
+    "description": "Successful Response",
+    "content": {
+    "application/json": {
+    "schema": { }
+    }
+    }
+    }
+    },
+    "security": [
+    {
+    "BearerAuth": [ ]
+    }
+    ]
+    }
+    }
+    },
+    "components": {
+    "schemas": {
+    "Body_create_voices_v1_audio_voices_post": {
+    "properties": {
+    "name": {
+    "type": "string",
+    "title": "Name"
+    },
+    "file": {
+    "type": "string",
+    "format": "binary",
+    "title": "File"
+    },
+    "public": {
+    "anyOf": [
+    {
+    "type": "boolean"
+    },
+    {
+    "type": "null"
+    }
+    ],
+    "title": "Public",
+    "default": true
+    },
+    "description": {
+    "anyOf": [
+    {
+    "type": "string"
+    },
+    {
+    "type": "null"
+    }
+    ],
+    "title": "Description",
+    "default": ""
+    },
+    "language": {
+    "anyOf": [
+    {
+    "type": "string"
+    },
+    {
+    "type": "null"
+    }
+    ],
+    "title": "Language",
+    "default": "auto"
+    }
+    },
+    "type": "object",
+    "required": [
+    "name",
+    "file"
+    ],
+    "title": "Body_create_voices_v1_audio_voices_post"
+    },
+    "Body_patch_voice_v1_audio_voices__id__patch": {
+    "properties": {
+    "name": {
+    "type": "string",
+    "title": "Name"
+    },
+    "file": {
+    "type": "string",
+    "format": "binary",
+    "title": "File"
+    },
+    "public": {
+    "anyOf": [
+    {
+    "type": "boolean"
+    },
+    {
+    "type": "null"
+    }
+    ],
+    "title": "Public",
+    "default": true
+    },
+    "description": {
+    "anyOf": [
+    {
+    "type": "string"
+    },
+    {
+    "type": "null"
+    }
+    ],
+    "title": "Description",
+    "default": ""
+    },
+    "language": {
+    "anyOf": [
+    {
+    "type": "string"
+    },
+    {
+    "type": "null"
+    }
+    ],
+    "title": "Language",
+    "default": "auto"
+    }
+    },
+    "type": "object",
+    "required": [
+    "name"
+    ],
+    "title": "Body_patch_voice_v1_audio_voices__id__patch"
+    },
+    "HTTPValidationError": {
+    "properties": {
+    "detail": {
+    "items": {
+    "$ref": "#/components/schemas/ValidationError"
+    },
+    "type": "array",
+    "title": "Detail"
+    }
+    },
+    "type": "object",
+    "title": "HTTPValidationError"
+    },
+    "MP3_Format_Model": {
+    "properties": {
+    "container": {
+    "type": "string",
+    "title": "Container"
+    },
+    "encoding": {
+    "type": "string",
+    "title": "Encoding"
+    },
+    "sample_rate": {
+    "type": "integer",
+    "title": "Sample Rate"
+    },
+    "bit_rate": {
+    "type": "integer",
+    "title": "Bit Rate",
+    "default": 0
+    }
+    },
+    "type": "object",
+    "required": [
+    "container",
+    "encoding",
+    "sample_rate"
+    ],
+    "title": "MP3_Format_Model"
+    },
+    "Speech_Model": {
+    "properties": {
+    "model_id": {
+    "type": "string",
+    "title": "Model Id"
+    },
+    "transcript": {
+    "type": "string",
+    "title": "Transcript"
+    },
+    "voice": {
+    "$ref": "#/components/schemas/VoiceModel-Input"
+    },
+    "output_format": {
+    "$ref": "#/components/schemas/MP3_Format_Model"
+    },
+    "language": {
+    "type": "string",
+    "title": "Language"
+    },
+    "context_id": {
+    "type": "string",
+    "title": "Context Id",
+    "default": ""
+    },
+    "fade_duration": {
+    "type": "integer",
+    "title": "Fade Duration",
+    "default": 0
+    }
+    },
+    "type": "object",
+    "required": [
+    "model_id",
+    "transcript",
+    "voice",
+    "output_format",
+    "language"
+    ],
+    "title": "Speech_Model"
+    },
+    "ValidationError": {
+    "properties": {
+    "loc": {
+    "items": {
+    "anyOf": [
+    {
+    "type": "string"
+    },
+    {
+    "type": "integer"
+    }
+    ]
+    },
+    "type": "array",
+    "title": "Location"
+    },
+    "msg": {
+    "type": "string",
+    "title": "Message"
+    },
+    "type": {
+    "type": "string",
+    "title": "Error Type"
+    }
+    },
+    "type": "object",
+    "required": [
+    "loc",
+    "msg",
+    "type"
+    ],
+    "title": "ValidationError"
+    },
+    "VoiceListResponse": {
+    "properties": {
+    "code": {
+    "type": "integer",
+    "title": "Code",
+    "default": 0
+    },
+    "message": {
+    "type": "string",
+    "title": "Message"
+    },
+    "data": {
+    "items": {
+    "$ref": "#/components/schemas/VoiceModel-Output"
+    },
+    "type": "array",
+    "title": "Data",
+    "default": [ ]
+    }
+    },
+    "type": "object",
+    "title": "VoiceListResponse"
+    },
+    "VoiceModel-Input": {
+    "properties": {
+    "mode": {
+    "type": "string",
+    "title": "Mode"
+    },
+    "id": {
+    "type": "string",
+    "title": "Id"
+    },
+    "embedding": {
+    "items": { },
+    "type": "array",
+    "title": "Embedding"
+    }
+    },
+    "type": "object",
+    "required": [
+    "mode"
+    ],
+    "title": "VoiceModel"
+    },
+    "VoiceModel-Output": {
+    "properties": {
+    "id": {
+    "type": "string",
+    "title": "Id"
+    },
+    "name": {
+    "type": "string",
+    "title": "Name"
+    },
+    "public": {
+    "type": "boolean",
+    "title": "Public"
+    },
+    "description": {
+    "type": "string",
+    "title": "Description"
+    },
+    "language": {
+    "type": "string",
+    "title": "Language"
+    },
+    "role": {
+    "type": "string",
+    "title": "Role"
+    },
+    "created_at": {
+    "type": "string",
+    "format": "date-time",
+    "title": "Created At"
+    },
+    "updated_at": {
+    "type": "string",
+    "format": "date-time",
+    "title": "Updated At"
+    }
+    },
+    "type": "object",
+    "required": [
+    "id",
+    "name",
+    "public",
+    "description",
+    "language",
+    "role",
+    "created_at",
+    "updated_at"
+    ],
+    "title": "VoiceModel"
+    },
+    "VoiceResponse": {
+    "properties": {
+    "code": {
+    "type": "integer",
+    "title": "Code",
+    "default": 0
+    },
+    "message": {
+    "type": "string",
+    "title": "Message"
+    },
+    "data": {
+    "anyOf": [
+    {
+    "$ref": "#/components/schemas/VoiceModel-Output"
+    },
+    {
+    "type": "null"
+    }
+    ]
+    }
+    },
+    "type": "object",
+    "title": "VoiceResponse"
+    }
+    },
+    "securitySchemes": {
+    "BearerAuth": {
+    "type": "http",
+    "scheme": "bearer",
+    "bearerFormat": "JWT"
+    }
+    }
+    }
+    }

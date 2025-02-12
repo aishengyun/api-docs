@@ -1,0 +1,72 @@
+---
+id: get
+title: "获取语音信息"
+description: ""
+sidebar_label: "获取语音信息"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVm1PG0cQ/ivWfEqkKzaoaiV/owFa0tAiMKmQZVXL3dre5Hx32dtDca2ToEqkUMKLCoS0RCSoSUFJU0OLmhYS8Wd85+NT/0I7t2dz5xf6KVL9xfbu7Mwzzz4zszUQpGRDNg/zJlOpDQUFNGqrnFmCmQZkDUfXFTAtygkujGuQhRIVoIBFOKlQQTker4FBKhSywDRQgBmQBYuIMijA6R2HcapBVnCHKmCrZVohkK2BqFp4whacGSVQQDCh48K4Bq5bwJO2ZRo2tdF4KJPBrwQ28B+se989DVbfeGuPQAHVNAQ1BNoRy9KZGkJO37LRuBaLbHFMSDDpWjU1GsPDDEFLlMcAXUODDl7A21jxTjabzxb/fvswkwr2DprPTySe0LRIHF1ANuMqUKG2TUphCGJUvyyGdCWTd5X2ChIOmH4r+kR0vDeAxtmev1gHBehdUrHCA/7GSuPdkwiLq4BGBEkGT+bPtP+4jc7IQf31+dPfU+MjibBT4sb10fLkWK40Up79vDhSmZiyP55FAFIa/UN8gfu9g3jrK839w0Qc73DNf7yKfi1nTmdqzPOcaeqUGDHXk9Kk07n/uO6t/+zd/8V7uxB3jhJ1O4z74x6JmfWG76+tBWeHPe7ofOHb5uZB42TVu3fWfPXC37rfOFn2n2wH9VPMTCdGyYk00y/6jZZNn9BLC97RblB/HRwkUoRvyhiBmzrtLih5NNj/Plj6rXl06u0uJ45Oz07nRicQQwcmajgVbCJtg5np0SmIifgmdpccnnIVUDklgmpfE3FZTShQNHkFbVDB9APBKvTSQrkm3aaGRXetPNjxTk/87T/Ot48RgWNp7wPBjHTbC4G/c+w/OmwhcNsUmnO3qCoSfTIvm6ghq8LqpeCYQqKr7OR6wtSo3k8aB3ve7nK3KjvVcJlIlbBt9Cv6uIJRcK0e0Crei9qVQ0GqUarG7cVw/zT8rUN/5deelCYImYqmSbc2VrYaf76Mu2z+eC81PDmekh02yZAcFpmLrvq/oCw2ZDraP34U+HBoqAfWlw+D+qL3/Cg4fvEepmebtI8ymcGuGzzb9HZ2zzd/COp1OUO9+28a7za89VeNv5aC/cW83Guc/tR8tli4kiYWS1POTW5fheRM7epF7XY1xqiupVqFpaQqzLaZUUrNmVq1SwZRPFkUl6nps1xu8ibRmRbyM4qYWjTbVHU4E9Wwl3xCCad82BFlyOYLKOIKFWUz/oDCLUjPD6aJozEzLZ9g6RrTXEBnfL71uHK4/i9pZSEsO5tGLgYIs8vUKFUdY0A1whJpBZ/Gi5J3E4fQJgq9QPQOC4dmaARK9GOs1fKuf5ULeWBG0QyPR/kPh5GrjoE10kUj1k3R5KkLfKAA5iG3BwcyA5lwdpu2qJBQWZHO5TNO1mG7N/WexILeFWlLJ8wImzmSU4vozMP8ICgQEoqR5atWgSzTsEeWTVugUa02R2w6w3XXxeU7DuV4awUF5glnZA4zzddAYzb+1iBbJLpNu/C0awauTEUyu5q6mI9JnNEiMVB880R38B8ocJtW5cPZLbgKlCnRKA+jy41hVaWWiB3pqs6Etj4dzYX5J+68447jsy4Jp1aTFjnzNjVct41O4H8E6Lr/AAK4sFs=
+sidebar_class_name: "get api-method"
+info_path: api/voices/aishenyun-api
+custom_edit_url: null
+sidebar_position: 5
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"获取语音信息"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/audio/voices/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","title":"Id"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"成功获取","content":{"application/json":{"schema":{"properties":{"code":{"type":"integer","title":"Code","description":"响应码，0 表示成功","default":0},"message":{"anyOf":[{"type":"string"},{"type":"null"}],"title":"Message","description":"响应信息","example":"操作成功"},"data":{"anyOf":[{"properties":{"id":{"type":"string","title":"Id","description":"语音 ID","example":"RtLJEhPFTgDhYKfDmMRs7Y"},"name":{"type":"string","title":"Name","description":"语音名称","example":"小明"},"public":{"type":"boolean","title":"Public","description":"是否公开","example":true},"description":{"type":"string","title":"Description","description":"语音描述信息","example":"适用于儿童故事朗读"},"language":{"type":"string","title":"Language","description":"语音所属语言","example":"zh"},"role":{"description":"语音角色类型","example":"SYSTEM","type":"string","enum":["SYSTEM","USER"],"title":"VoiceType"},"created_at":{"anyOf":[{"type":"string","format":"date-time"},{"type":"null"}],"title":"Created At","description":"创建时间"},"updated_at":{"anyOf":[{"type":"string","format":"date-time"},{"type":"null"}],"title":"Updated At","description":"更新时间"}},"type":"object","required":["id","name","public","description","language","role"],"title":"VoiceModel","description":"语音模型信息","example":{"description":"适用于儿童故事朗读","id":"RtLJEhPFTgDhYKfDmMRs7Y","language":"zh","name":"小明","public":true,"role":"USER"}},{"type":"null"}],"description":"语音模型数据"}},"type":"object","title":"VoiceResponse","description":"单个语音模型的 API 响应","example":{"code":0,"data":{"description":"适用于儿童故事朗读","id":"RtLJEhPFTgDhYKfDmMRs7Y","language":"zh","name":"小明","public":true,"role":"USER"},"message":"操作成功"}}}}},"422":{"description":"验证失败","content":{"application/json":{"schema":{"properties":{"code":{"type":"integer","example":6001,"description":"返回错误码，具体含义见[错误代码](/api/errors)"},"message":{"type":"string","example":"Field required, missing body","description":"错误信息"}},"type":"object","title":"HTTPValidationError"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

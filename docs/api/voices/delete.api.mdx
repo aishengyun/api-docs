@@ -1,0 +1,72 @@
+---
+id: delete
+title: "删除声音"
+description: ""
+sidebar_label: "删除声音"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVEFPE0EU/ivNO4/tInhwb0VKUmMMwRpjmh6G3Uc7sp1ZZmYLzWYSSTwUTl41JqDiyRhQDEf/TQv8C32zBVpqxHhxD7uzM2+++b73vjc5WN42EDahp0SEBloMYjSRFqkVSkIosyRhoFLUnCbqMYQQY4IWgYHGzQyNXVRxH8IcIiUtSktDnqaJiPyWygtDQDmYqINdTqNUE6AVaOhPxPS2/RQhBGO1kG24wQLqS8AAt3k3TSgq1s/1lrw3315Fs70Bzj/Ex6RKmgL2bhDQZxpnNHg93NsfDg4u3hwC+1fGkYpxgrOQFtuoZ0if7Z2OXu6cHexMcg8cg5hbfrvm8w+fC6Jnb1+V/i4BC8HCbzR/ez96tzva/TEcHJ8ffbnYPynQ/oP4+0Ew7xh00RjexttTMDz8ev790+h0MNo5mtL/WNnSsspkPJbuGBiMMi1sH8JmDovINepqZjsQNluuRWfajppyb8ppFSq9uQrPYqEq4xYgKN1DbTxSppNftehYm5qwUuGpKHNhOijb/UyWIwmEfXn0E0pZkaVJAlcqCYXgfRiEsOaDgI0Hy0p3uYUQHj5rAEmiUqxe91jtUn7RMzMmYCDkuvLnCevTVPVU+5ksVVfqM9mtrtRL60qXrgUBAxJeLM+Vg3JAqKkytsu9KST3xAtfDj8eX+yf3IS9Umtx21bShAtJID6P+TjpTejNAQOfdjrz6u7pKGNpOc/XuMGnOnGOpjcz1FTYFoMe14KvkbpmyzHoII9R+0ptYB9CeFC4+k6DSFB4khGZGYc7drmjGkWY2j/GTvpnqfao1qhR0cbXXtc3BGi+RVci34IQgK5M2u+94OdySLhsZ972UKBSifm0Q244wusaL3HZn+CY50VEQ22gdA7YWIylf3At59xP0+4cfQ==
+sidebar_class_name: "delete api-method"
+info_path: api/voices/aishenyun-api
+custom_edit_url: null
+sidebar_position: 3
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"删除声音"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/v1/audio/voices"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"properties":{"id":{"type":"string","description":"ID","example":"drYrwn53gResxk"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"成功删除","content":{"application/json":{"schema":{"properties":{"code":{"type":"integer","description":"状态码","example":0},"data":{"type":"string","description":"被删除的 ID","example":"drYrwn53gResxk"}}}}}},"404":{"description":"没有找到语音 ID","content":{"application/json":{"schema":{"properties":{"code":{"type":"integer","description":"状态码","example":9003},"message":{"type":"string","description":"失败消息","example":"Not Found"}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

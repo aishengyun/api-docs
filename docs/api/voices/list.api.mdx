@@ -1,0 +1,64 @@
+---
+id: list
+title: "获取语音列表"
+description: ""
+sidebar_label: "获取语音列表"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVk1v20YQ/SvCnFlL7qWAbm7sFE7t1rDlBoYqGGtyJa5DLpndpRBFIOAUCeDE9QeS1A6SwKmLpDHaGnbaoC3kFP4zJiWf+hfaISmZ1IdvBaoLqeXsvDezb2a2CYrUJBTLUHeYTiVUNDCo1AVzFXM4FLlnWRo4LhUEF6YNKILFpAINBJWuwyWVUGzCx4UCPjJ7IVzfCR696mz9EWzvgga6wxXlCu2I61pMj1zmVyUaN0HqJrUJvrkCARWLXeuOQfGpGi6FIjCuaI0K0EAxZeHKNTTo4w3Bk82g9bT9/b2/P3xbyHUODtuvWzGfyLRKPEtBseBrYFMpSS2CILzxZRWK5R6YVILxGvhabwUTAn7lEn022T6cwPnZQXjvGDSgd4jtRhvCJ5vnf71MuPgaGERFUTNFbTkYPjNSwSd8LtGnjQHgzvHRxavfctOTGdR5NXNjypy7XqpNmkufVyft2Xn5yRLic2LTqyC+wO/DQYKdzfbbkwxOcLIdPttCv663YjE95XnFcSxKeMr1XGzS7zx8dhzs/Bg8+CX4sJZ2roRH/T7j0bwnU2bD6Yfb252zkyFHdLH2Tfvp4XlrK7h/1v75Tfjdg/PWRvhyr3N8ipFZhNe8RDKj0Ge6NiOgH64F7/Y7x0edw0yIcNdEBOFYdLCe4q2dt487D39tvzsN9jcyWxeWFkpTs8ihjxPlno013jNYXJiah5SGv8LiL+EuXwNdUKKosUzUVSWhQdURNtqggOlHitn0yjq5FrvNTajBUll/EZy2wr3fL/beIwPPNf4LBoux22EMwhfvw92TLgO/l0JnZZXqcbO77TFBDUwjw5rjcVW4wxScUkhylP25nnUMao2SxuFBsL8xqMp+NVwlUi1qG6OKPq1gFFy3B3SL97J2seK6aoxVk0oOEYI00gWHjeyqmIL1vc7B4dD8ZrIzw6SaT6bLoFhePz//86e02/bz+7mJuelc3HGzKYuHR6HbZcv/kyRqI3mEuycXe6fh46Pw0Zsug6/VXXO5Sm1i0eVVRhosC055Brzd+iEFXiWWvERPOgBWRW/s9Q2k6KeBpLonmGpEOfuUEkHFhKdMKJYr8W5lOsitRvH4XIKfIF8fzxPPYE4+uU6gH1GnQkZuPGH9qwhTKVcW83nisjHCpEl5reHxMZ1HtLq4C3gbiCdgGr1X3egF3UdmOFwiI9CSl+vd1nDjZikSHONVJ9qeCG0iQm54HKUzIDKUU9URuUt+oAHGEX8eHyuMFaIZ50hlk2gMJQcQ33aS8RjrfdTEUvSOyrsWYTxqepicZpLJMtTHQYMol4jcu5yZjlT4udlcIZIuCsv3cfm2RwUeVUWDOhGMrGCM5YqvgUmJQUWU/lu0gaHpOnXxzOrE8qIy7r+LZc73s6lSRCST/L5kp5sz4Y2U72Yztig5tyj3fdASEgr/g1/xff8fYk4Nag==
+sidebar_class_name: "get api-method"
+info_path: api/voices/aishenyun-api
+custom_edit_url: null
+sidebar_position: 1
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"获取语音列表"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/audio/voices"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"成功获取","content":{"application/json":{"schema":{"properties":{"code":{"type":"integer","title":"Code","description":"响应码，0 表示成功","default":0},"message":{"anyOf":[{"type":"string"},{"type":"null"}],"title":"Message","description":"响应信息","example":"操作成功"},"data":{"items":{"properties":{"id":{"type":"string","title":"Id","description":"语音 ID","example":"RtLJEhPFTgDhYKfDmMRs7Y"},"name":{"type":"string","title":"Name","description":"语音名称","example":"小明"},"public":{"type":"boolean","title":"Public","description":"是否公开","example":true},"description":{"type":"string","title":"Description","description":"语音描述信息","example":"适用于儿童故事朗读"},"language":{"type":"string","title":"Language","description":"语音所属语言","example":"zh"},"role":{"description":"语音角色类型","example":"SYSTEM","type":"string","enum":["SYSTEM","USER"],"title":"VoiceType"},"created_at":{"anyOf":[{"type":"string","format":"date-time"},{"type":"null"}],"title":"Created At","description":"创建时间"},"updated_at":{"anyOf":[{"type":"string","format":"date-time"},{"type":"null"}],"title":"Updated At","description":"更新时间"}},"type":"object","required":["id","name","public","description","language","role"],"title":"VoiceModel","description":"语音模型信息","example":{"description":"适用于儿童故事朗读","id":"RtLJEhPFTgDhYKfDmMRs7Y","language":"zh","name":"小明","public":true,"role":"USER"}},"type":"array","title":"Data","description":"语音模型列表"}},"type":"object","title":"VoiceListResponse","description":"多个语音模型的 API 响应","example":{"code":0,"data":[{"description":"适用于儿童故事朗读","id":"RtLJEhPFTgDhYKfDmMRs7Y","language":"zh","name":"小明","public":true,"role":"USER"},{"description":"适用于新闻播报","id":"\tzh_female_jiayi","language":"en","name":"小红","public":false,"role":"SYSTEM"}],"message":"操作成功"}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

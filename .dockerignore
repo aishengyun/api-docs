@@ -1,0 +1,8 @@
+node_modules
+.docusaurus
+Dockerfile
+.dockerignore
+npm-debug.log
+README.md
+docker
+.git
