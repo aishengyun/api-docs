@@ -9,7 +9,7 @@
 | 模型 | 调用方式 | 价格 | 说明 |
 |--------|------|----------|------|
 | emotion-tts-v1 | `http` | 0.12 元 |  |
-| emotion-tts-v1 | `websocket` | 0.12 元|  |
+| emotion-tts-v1 | `websocket` | 0.12 元 |  |
 
 ## 复刻声音
 
