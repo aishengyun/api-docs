@@ -190,6 +190,8 @@ async function makeRequest(request, proxy, _body) {
         fileExtension = ".bin";
       } else if (contentType.includes("application/zip")) {
         fileExtension = ".zip";
+      }else if (contentType.includes("audio/wav")) {
+        fileExtension = ".wav";
       }
       if (fileExtension) {
         return response.blob().then((blob) => {

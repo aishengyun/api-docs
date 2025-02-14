@@ -20,6 +20,11 @@ paths:
         ### Server-Sent Events 流式输出响应说明
           Server-Sent Events (SSE) 是一种服务器向客户端推送流式数据的技术。它适用于无需频繁与服务器进行交互的场景，只需服务器持续生成和推送流式音频数据即可满足需求。   
           如果你要使用 Server-Sent Events 流式输出响应，需要在请求头添加 `Accept: text/event-stream` 来启用流式输出。
+        
+        :::info
+            本接口支持右边调用界面调用
+        :::
+      
       operationId: post
       requestBody:
         content:
@@ -141,15 +146,27 @@ paths:
                     status_code: 200
                     done: true
                     context_id: 09dde5c1-1ac9-4434-9860-b97f9a792072
+        '400':
+          description: 输入错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
         '422':
           description: 数据验证错误
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
+        '429':
+          description: API 调用超出并发量
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
       security:
         - BearerAuth: []
-    get:
+    wss:
       tags:
         - speech
       operationId: websocket
@@ -165,6 +182,9 @@ paths:
 
         阅读有关使用[上下文的指南](/guides/contexts)以了解更多信息。
 
+        :::danger
+          由于是 websocket，本接口暂时不支持右边调用界面调用
+        :::
       requestBody:
         content:
           application/json:

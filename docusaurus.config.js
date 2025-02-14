@@ -212,10 +212,15 @@ const config = {
           speech: {
             specPath: "api-reference/speech/openapi.yaml",
             outputDir: "docs/api/speech",
+            disableCompression: true
           },
           voices: {
             specPath: "api-reference/voices/openapi.yaml",
             outputDir: "docs/api/voices",
+          },
+          user: {
+            specPath: "api-reference/user/openapi.yaml",
+            outputDir: "docs/api/user",
           }
         }
       },

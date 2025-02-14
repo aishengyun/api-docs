@@ -10,8 +10,12 @@ paths:
     get:
       tags:
         - voices
-      summary: 获取语音列表
-      description: 
+      summary: 语音列表
+      description: |
+        获取语音列表
+        :::info
+            本接口支持右边调用界面调用
+        :::
       operationId: list
       responses:
         '200':
@@ -26,6 +30,11 @@ paths:
       tags:
         - voices
       summary: 复刻语音
+      description: |
+        语音标准详见[声音复刻指南](/guides/clone)
+        :::info
+            本接口支持右边调用界面调用
+        :::
       operationId: create
       requestBody:
         content:
@@ -41,7 +50,25 @@ paths:
               schema:
                 $ref: '#/components/schemas/VoiceResponse'
         '422':
-          description: 验证数据失败
+          description: 数据验证失败
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+        '400':
+          description: 用户数据错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+        '415':
+          description: 不支持的音频文件
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+        '500':
+          description: 服务器错误
           content:
             application/json:
               schema:
@@ -52,7 +79,12 @@ paths:
       tags:
         - voices
       summary: 删除声音
-      description: 
+      description: |
+        删除一个复刻声音
+
+        :::info
+            本接口支持右边调用界面调用
+        :::
       operationId: delete
       requestBody:
         content:
@@ -92,14 +124,24 @@ paths:
                     type: string
                     description: 失败消息
                     example: Not Found
+        '422':
+          description: 数据验证失败
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
       security:
         - BearerAuth: []
   /v1/audio/voices/{id}:
     get:
       tags:
         - voices
-      summary: 获取语音信息
-      description: 
+      summary: 语音信息
+      description: |
+        获取语音信息
+        :::info
+            本接口支持右边调用界面调用
+        :::
       operationId: get
       parameters:
         - name: id
@@ -115,8 +157,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VoiceResponse'
+        '404':
+          description: 数据不存在
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
         '422':
-          description: 验证失败
+          description: 数据验证失败
           content:
             application/json:
               schema:
@@ -127,7 +175,11 @@ paths:
       tags:
         - voices
       summary: 更新语音
-      description: 
+      description: |
+        更新语音语音
+        :::info
+            本接口支持右边调用界面调用
+        :::
       operationId: update
       parameters:
         - name: id
@@ -149,8 +201,26 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VoiceResponse'
+        '400':
+          description: 用户数据错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+        '415':
+          description: 不支持的音频文件
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
         '422':
-          description: 验证失败
+          description: 数据验证失败
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+        '500':
+          description: 服务器错误
           content:
             application/json:
               schema:

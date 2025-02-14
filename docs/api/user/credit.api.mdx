@@ -1,0 +1,67 @@
+---
+id: credit
+title: "余额查询"
+description: "查询账户余额"
+sidebar_label: "余额查询"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVV2LFEcU/SvNfYpQ7Mwu4kO/raJmA5LFzCYPs43UdN/pKe2pbquqB4emH4YQMGH9AFdQ1GhWjGI0IySgosY/MzM7+5S/kNzqnt3ecV2E4Fue+qPOPffWObduZWB4qMFtQqpRgccgQO0rkRgRS3Bhcv/RdLg1/fPXyeWXo3e3d7burUvXdYVsx+vScRxncvfZ5Oqj8bWHk83hZGMwvvbH9K/X0xffb28+2b65sXNvq3i3UesSGMQJKk7sKwG44CsMhAEGCnUSS40a3AyW6nV6zJVy+fr4p/vT95vjOz8DAz+WBqUhHE+SSPiWtHZeEzgD7Xewy+ktUZTSiILajwOkp+knCC4IaTBEBQyMMBH9OUEAkqHN08iAW88ZdFFrHlbjtFFChpWwMyUkZxBwYxNz2f+6DW5zvgRS+pwIDmNb06iclYDYCC1599DkazNMzqDFIy79Klym3da+LR4vITmDULTNuU8IOS3axqnEKfQ7XIX4KbFnS+xefM5m4Lh1Hv3C/4upUBjMWpEEqmx+b19zNR9Qilcx07bXmTjACHJWKTGKIPcOqmN/5NmyKyHPCXy0fvSAvrz5YnLl99GrK+Pnt8Z3n3yG1sRLvJtQVcfq9cX5E1ociJ3N29PhcPvB4O+3G+MfXo7e3Rhf/230+sfp40GzWBu9ebj9YOB9UeOJqKFSsdJH4PDe3s0LpwRGgTPziDldobWQodOKgz7MV1Tme//LZDA80OuZxl82Gqvf8kgEVp+TVNNM6KWljwm983RjOhwUOf7X+j9rnTPQ6KdKmL4dVceRK1TLqemA2/Ryj4o2nZhmdYhEmHBaglpvsUans7Y7wTWqHiptWVIV/StXx5hEuzVSYYEL3UEZ9lO54Esg3lnab8iiwpVq8l2JiIXoLQxcaFkQTQT7cipWXW7Aha++a1gF6G6y4eXOl23mfiqd5dWVDwRcXl1x2rFy9uoDBrSPYnlxob5QJ+uSWJsutz1VTGMorsPigpynzfb68jNcoaUwBi+ZWhJxIe09QZJnpT1N6C2W45POSGGRx6ATa0OrWdbiGtdUlOf0+2KKiuz3GPS4ErxFwjW9nEEHeYDKenoB+6SX72NCdvd4lFIVH5y6fT1z+mQDGPD9js45aNnLJS77Fe4sKxCN+ALKPAdWFmHo2w7w/B/qSWGj
+sidebar_class_name: "get api-method"
+info_path: api/user/aishenyun-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"余额查询"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/user/credit"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+查询账户余额
+:::info
+    本接口支持右边调用界面调用
+:::
+
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"成功返回","content":{"application/json":{"schema":{"properties":{"code":{"type":"integer","title":"Code","default":0},"message":{"type":"string","title":"Message"},"data":{"anyOf":[{"properties":{"user_id":{"type":"string","title":"User Id"},"username":{"type":"string","title":"Username"},"balance":{"type":"number","title":"Balance"},"gift_balance":{"type":"number","title":"Gift Balance"},"recharge_balance":{"type":"number","title":"Recharge Balance"}},"type":"object","required":["user_id","username","balance","gift_balance","recharge_balance"],"title":"CreditModel"},{"type":"null"}]}},"type":"object","title":"CreditResponse"}}}},"404":{"description":"数据不存在","content":{"application/json":{"schema":{"properties":{"code":{"type":"integer","example":6001,"description":"返回错误码，具体含义见[错误代码](/api/errors)"},"message":{"type":"string","example":"Field required, missing body","description":"错误信息"}},"type":"object","title":"HTTPValidationError"}}}},"422":{"description":"数据验证错误","content":{"application/json":{"schema":{"properties":{"code":{"type":"integer","example":6001,"description":"返回错误码，具体含义见[错误代码](/api/errors)"},"message":{"type":"string","example":"Field required, missing body","description":"错误信息"}},"type":"object","title":"HTTPValidationError"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

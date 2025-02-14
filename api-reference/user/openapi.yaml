@@ -1,0 +1,100 @@
+---
+openapi: 3.1.0
+info:
+  title: Aishenyun API
+  description: API for aishengyun
+  version: 1.0.0
+servers:
+  - url: https://api.aishengyun.cn
+paths:
+  "/v1/user/credit":
+    get:
+      tags:
+      - user
+      summary: 余额查询
+      description: |
+        查询账户余额
+        :::info
+            本接口支持右边调用界面调用
+        :::
+      operationId: credit
+      responses:
+        '200':
+          description: 成功返回
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/CreditResponse"
+        '404':
+          description: 数据不存在
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+        '422':
+          description: 数据验证错误
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+      security:
+      - BearerAuth: []
+components:
+  schemas:
+    CreditModel:
+      properties:
+        user_id:
+          type: string
+          title: User Id
+        username:
+          type: string
+          title: Username
+        balance:
+          type: number
+          title: Balance
+        gift_balance:
+          type: number
+          title: Gift Balance
+        recharge_balance:
+          type: number
+          title: Recharge Balance
+      type: object
+      required:
+      - user_id
+      - username
+      - balance
+      - gift_balance
+      - recharge_balance
+      title: CreditModel
+    CreditResponse:
+      properties:
+        code:
+          type: integer
+          title: Code
+          default: 0
+        message:
+          type: string
+          title: Message
+        data:
+          anyOf:
+          - "$ref": "#/components/schemas/CreditModel"
+          - type: 'null'
+      type: object
+      title: CreditResponse
+    HTTPValidationError:
+      properties:
+        code:
+          type: integer
+          example: 6001
+          description: 返回错误码，具体含义见[错误代码](/api/errors)
+        message:
+          type: string
+          example: Field required, missing body
+          description: 错误信息
+      type: object
+      title: HTTPValidationError
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
