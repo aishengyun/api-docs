@@ -176,24 +176,19 @@ const config = {
         logoClass: "csharp",
       },
       {
+        highlight: "php",
+        language: "php",
+        logoClass: "php",
+      },
+      {
+        highlight: "java",
+        language: "java",
+        logoClass: "java",
+      },
+      {
         highlight: "c",
         language: "c",
         logoClass: "c",
-      },
-      {
-        highlight: "objective-c",
-        language: "objective-c",
-        logoClass: "objective-c",
-      },
-      {
-        highlight: "swift",
-        language: "swift",
-        logoClass: "swift",
-      },
-      {
-        highlight: "kotlin",
-        language: "kotlin",
-        logoClass: "kotlin",
       },
       {
         highlight: "rust",

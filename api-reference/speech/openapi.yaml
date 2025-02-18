@@ -439,13 +439,18 @@ components:
           title: Language
           description: 语言，支持 `zh`、`en`、`jp`、`auto`
           example: zh
+        volume:
+          title: 音量
+          type: float
+          description: 合成输出的音量，范围 `0` - `4.0`
+          example: 1.0
         context_id:
           anyOf:
             - type: string
             - type: 'null'
           title: Context Id
           description: 上下文 ID，可用于句子间的连续合成
-          default: ''
+          default: 'session-12Te3grseYEsuyt'
           example: session-12Te3grseYEsuyt
       type: object
       required:
@@ -479,6 +484,11 @@ components:
           title: Language
           description: 语言，支持 `zh`、`en`、`jp`、`auto`
           example: zh
+        volume:
+          title: 音量
+          type: float
+          description: 合成输出的音量，范围 `0` - `4.0`
+          example: 1.0
         context_id:
           type: string
           title: Context Id
@@ -521,10 +531,12 @@ components:
         context_id:
           anyOf:
             - type: string
+              title: 请求的 context_id 
+              example: session-12Te3grseYEsuyt
             - type: 'null'
-          title: Context Id
+              title: 系统自动生成
+          title: 请求的 context_id 
           description: 上下文 ID，可用于句子间的连续合成
-          default: ''
           example: session-12Te3grseYEsuyt
       type: object
       required:
@@ -652,14 +664,14 @@ components:
               format: date-time
             - type: 'null'
           title: Created At
-          description: 创建时间，仅管理员可见
+          description: 创建时间
         updated_at:
           anyOf:
             - type: string
               format: date-time
             - type: 'null'
           title: Updated At
-          description: 更新时间，仅管理员可见
+          description: 更新时间
       type: object
       required:
         - id
