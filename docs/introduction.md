@@ -48,7 +48,6 @@ Emotion-TTS 广泛应用于以下场景:
 
 扫描下方二维码加入我们的技术支持群，获取即时帮助：
 
-
 <img
   src='https://cdn.aishengyun.cn/assets/qr/qrcode_ma.png'
   width="280"

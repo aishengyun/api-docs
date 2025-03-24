@@ -14,6 +14,7 @@ tags:
 
 | **Voice ID**       | **名称** | **样例** |
 |---------------------|--------------|----------------|
+| `zh_female_wanwanxiaohe` | 湾湾小何 | <audio controls src="https://cdn.aishengyun.cn/speakers/zh_female_wanwanxiaohe.wav"></audio> |
 | `zh_female_tianmei` | 天美         | <audio controls src="https://cdn.aishengyun.cn/speakers/zh_female_tianmei.wav"></audio> |
 | `zh_male_jiangjian` | 江剑         | <audio controls src="https://cdn.aishengyun.cn/speakers/zh_male_jiangjian.wav"></audio> |
 | `zh_female_xiaotong`| 晓彤         | <audio controls src="https://cdn.aishengyun.cn/speakers/zh_female_xiaotong.wav"></audio> |

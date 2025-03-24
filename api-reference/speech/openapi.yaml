@@ -382,6 +382,13 @@ components:
           type: string
           example: Field required, missing body
           description: 错误信息
+    Control_Model:
+      properties:
+        emotion:
+          type: string
+          title: Emotion
+          description: 情绪加强，可选值：`happy`, `sad`, `surprise`, `angry`, `fear`, `disguste`, `calm`, `serious`, `curious`, `cute`
+          example: happy
     MP3_Format_Model:
       properties:
         container:
@@ -427,13 +434,16 @@ components:
           type: string
           title: 要合成语音的文字
           description: 需要合成的文本
-          example: 你好，欢迎使用语音合成服务。
+          example: 哇，收到信的那一刻，我蹦的老高。
         voice:
           $ref: '#/components/schemas/VoiceModel-Input'
           description: 语音参数
         output_format:
           $ref: '#/components/schemas/MP3_Format_Model'
           description: 输出格式参数，MP3
+        control:
+          $ref: '#/components/schemas/Control_Model'
+          description: 控制增强，可增强情绪等
         language:
           type: string
           title: Language
@@ -472,13 +482,16 @@ components:
           type: string
           title: 要合成语音的文字
           description: 需要合成的文本
-          example: 你好，欢迎使用语音合成服务。
+          example: 哇，收到信的那一刻，我蹦的老高。
         voice:
           $ref: '#/components/schemas/VoiceModel-Input'
           description: 语音参数
         output_format:
           $ref: '#/components/schemas/MP3_Format_Model'
           description: 输出格式参数，MP3
+        control:
+          $ref: '#/components/schemas/Control_Model'
+          description: 控制增强，可增强情绪等
         language:
           type: string
           title: Language
@@ -601,7 +614,7 @@ components:
             public: true
             role: USER
           - description: 适用于新闻播报
-            id: "\tzh_female_jiayi"
+            id: "zh_female_jiayi"
             language: en
             name: 小红
             public: false

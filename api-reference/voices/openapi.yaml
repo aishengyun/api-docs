@@ -262,6 +262,11 @@ components:
             - type: 'null'
           title: Language
           default: auto
+        model_id:
+          type: string
+          title: 名称
+          description: 复刻的模型名称，默认 `emotion-tts-v1`
+          example: emotion-tts-v1
       type: object
       required:
         - name
